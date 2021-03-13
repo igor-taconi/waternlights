@@ -35,6 +35,10 @@ export FLASK_APP=main.py
 export FLASK_ENV=Development
 python main.py
 ```
+- Entre no seu navegador acessando a porta padrão
+```bash
+http://127.0.0.1:5000/
+```
 
 ## Todo
 - Implementar banco de dados para o cadastro dos usuários, cadastro dos produtos e para os posts do blog.

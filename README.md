@@ -1,11 +1,11 @@
 # Gisela Ortt
 Projeto de um site para a venda de desenhos e publicações de um blog da Gisela Ortt   
 <a href="https://www.instagram.com/waternlights/">
-  <img align="left" alt="Instagram" src="https://img.shields.io/badge/-Watern Lights-%23B7178C.svg?&logo=Instagram&logoColor=white"/>
+  <img alt="Instagram" src="https://img.shields.io/badge/-Watern Lights-%23B7178C.svg?&logo=Instagram&logoColor=white"/>
 </a>   
 
 <a href="https://drive.google.com/drive/u/0/folders/1D8wFGOGt5BMG6-57hG2jsTmZavpsbuxN">
-  <img align="left" alt="GoogleDrive" src="https://img.shields.io/badge/-Portifólio-%2331A8FF.svg?&logo=GoogleDrive&logoColor=white"/>
+  <img alt="GoogleDrive" src="https://img.shields.io/badge/-Portifólio-%2331A8FF.svg?&logo=GoogleDrive&logoColor=white"/>
 </a>     
 <br>
 

@@ -11,8 +11,8 @@
   <body>
     {% include 'components/navbar.html' %}
 
-    {% if request.endpoint == 'index' %}
-    <h1 class="text-center">{{ name|upper }}</h1>
+    {% if request.endpoint == 'webui.index' %}
+      <h1 class="text-center">{{ name|upper }}</h1>
     {% endif %}
 
     {% block conteudo %}

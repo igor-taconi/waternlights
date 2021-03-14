@@ -33,22 +33,24 @@ source .venv/bin/activate
 ```bash
 pip install -U pip
 pip install -r requirements.txt
+pip install -r requirements_dev.txt
+pip install -r requirements_test.txt
 ```
 
 - ### Como rodar esse projeto
  - Se estiver usando Linux ou Mac
 ```bash
-export FLASK_APP=main.py
-export FLASK_ENV=Development
+export FLASK_ENV=development
+export FLASK_APP=giselaortt.app:create_app
 ```
  - Se estiver usando Windows
 ```bash
-set FLASK_APP=main.py
-set FLASK_ENV=Development
+set FLASK_ENV=development
+set FLASK_APP=giselaortt.app:create_app
 ```
 
-  ```
-  python main.py
+  ```bash
+  flask run
   ```
 - Entre no seu navegador acessando a porta padrão
 ```bash
@@ -56,8 +58,8 @@ http://127.0.0.1:5000/
 ```
 
 ## Todo
-- Implementar banco de dados para o cadastro dos usuários, cadastro dos produtos e para os posts do blog.
 - Implementar testes.
+- Implementar banco de dados para o cadastro dos usuários, cadastro dos produtos e para os posts do blog.
 - Melhorar o design do site.
  - interface do usuário (UI).
  - experiência do usuário (UX).

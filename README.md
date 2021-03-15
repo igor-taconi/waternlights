@@ -10,7 +10,7 @@ Projeto de um site para a venda de desenhos e publicações de um blog da Gisela
 <br>
 
 ## Pré-requisitos
-Para você rodar o projeto é necessário tem instalado em sua máquina o `Python3.6.+`.
+Para você rodar o projeto é necessário tem instalado em sua máquina o [`Python3.6.+`](https://www.python.org/) e o [`Poetry`](https://python-poetry.org/). Em ambos os sites há istruções para você instala-las em sua máquina.
 
 ## Como rodar esse projeto
 - ### Clone esse repositório.
@@ -18,23 +18,20 @@ Para você rodar o projeto é necessário tem instalado em sua máquina o `Pytho
 git clone https://github.com/igor-taconi/giselaortt.git <nome_da_pasta>
 ```
 
-- ### Crie um virtualenv com Python 3.
+- ### Crie um virtualenv com Python 3.8 usando o poetry.
 ```bash
 cd <nome_da_pasta>
-python -m venv .venv
+poetry env use 3.8
 ```
 
 - ### Ative o virtualenv.
 ```bash
-source .venv/bin/activate
+poetry shell
 ```
 
 - ### Instale as dependências.
 ```bash
-pip install -U pip
-pip install -r requirements.txt
-pip install -r requirements_dev.txt
-pip install -r requirements_test.txt
+poetry install
 ```
 
 - ### Como rodar esse projeto

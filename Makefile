@@ -26,3 +26,7 @@ clean:
 	rm -rf .coverage
 	rm -rf .tox/
 	rm -rf docs/_build
+
+test:
+	pytest tests/ -v --cov=giselaortt
+	coverage html

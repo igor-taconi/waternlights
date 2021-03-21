@@ -1,5 +1,6 @@
-from giselaortt.extensions import configuration
 from flask import Flask
+
+from giselaortt.extensions import configuration
 
 
 def minimal_app(**config):

@@ -1,5 +1,6 @@
 from flask import Blueprint
-from .views import index, store, login, blog, about
+
+from .views import about, blog, index, login, store
 
 bp = Blueprint("webui", __name__, template_folder="templates")
 

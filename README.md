@@ -13,10 +13,10 @@ Projeto de um site para a venda de desenhos e publicações de um blog da Gisela
 =================
   * [Pré-requisitos](#pré-requisitos)
   * [Como rodar o projeto](#como-rodar-esse-projeto)
-    * [Virtualenv e dependências](#generate-multiple-spiders-from-template)
+    * [Virtualenv e dependências](#virtualenv-e-dependências)
       * [venv](#venv)
       * [poetry](#poetry)
-    *[Rodar o projeto](#rodar-o-projeto)
+      * [Rodar o projeto](#rodar-o-projeto)
   * [Todo](#todo)
   * [Contribuindo](#contribuindo)
   * [Licença](#licença)
@@ -75,6 +75,10 @@ flask run
 ou
 ```bash
 gunicorn giselaortt.wsgi:app --bind 0.0.0.0:5000 --timeout 1000 --worker-class gevent
+```
+ou
+```bash
+make run
 ```
 - Entre no seu navegador acessando a porta padrão
 ```bash

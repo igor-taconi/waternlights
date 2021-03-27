@@ -39,8 +39,11 @@ python -m venv .venv
 ```
 
   - #### Ative o virtualenv.
-```bash
+```sh
+# Para Macs ou Linux
 source .venv/bin/activate
+# For Windows
+.venv\Scripts\activate
 ```
 
   - #### Instale as dependências.

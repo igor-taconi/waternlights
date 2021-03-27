@@ -13,10 +13,10 @@ Projeto de um site para a venda de desenhos e publicações de um blog da Gisela
 =================
   * [Pré-requisitos](#pré-requisitos)
   * [Como rodar o projeto](#como-rodar-esse-projeto)
-    * [Virtualenv e dependências](#generate-multiple-spiders-from-template)
+    * [Virtualenv e dependências](#virtualenv-e-dependências)
       * [venv](#venv)
       * [poetry](#poetry)
-    *[Rodar o projeto](#rodar-o-projeto)
+      * [Rodar o projeto](#rodar-o-projeto)
   * [Todo](#todo)
   * [Contribuindo](#contribuindo)
   * [Licença](#licença)
@@ -30,7 +30,7 @@ Para você rodar o projeto é necessário tem instalado em sua máquina o [`Pyth
 git clone https://github.com/igor-taconi/giselaortt.git <nome_da_pasta>
 ```
 - ### Virtualenv e dependências
-  #### Venv
+  ### Venv
 
   - ##### Crie um virtualenv com Python3 usando o venv.   
 ```bash
@@ -54,7 +54,7 @@ pip install --require-hashes -r requirements_dev.txt
 pip install --require-hashes -r requirements_test.txt
 ```
 
-  #### Poetry
+  ### Poetry
   - ##### Crie um virtualenv com Python 3.8 usando o poetry.   
 ```bash
 cd <nome_da_pasta>
@@ -78,6 +78,10 @@ flask run
 ou
 ```bash
 gunicorn giselaortt.wsgi:app --bind 0.0.0.0:5000 --timeout 1000 --worker-class gevent
+```
+ou
+```bash
+make run
 ```
 - Entre no seu navegador acessando a porta padrão
 ```bash

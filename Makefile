@@ -28,5 +28,5 @@ clean:
 	rm -rf docs/_build
 
 test:
-	pytest tests/ -v --cov=giselaortt
+	pytest giselaortt/tests/ -v --cov=giselaortt
 	coverage html

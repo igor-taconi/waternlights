@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "giselaortt"
+name = "waternlights"
 version = "0.1.0"
 description = "Site para a venda de desenhos e publicações de um blog"
 authors = ["Igor Taconi <igortaconi1@gmail.com>"]
 license = "GPL-3-0-only"
 readme = "README.md"
 homepage = ""
-repository = "https://github.com/igor-taconi/giselaortt"
+repository = "https://github.com/igor-taconi/waternlights"
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Environment :: Web Environment",
@@ -19,12 +19,12 @@ classifiers = [
   "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 packages = [
-  { include = "giselaortt" }
+  { include = "waternlights" }
 ]
 include = [
   "README.md",
-  "giselaortt/webui/templastes/*.html",
-  "giselaortt/webui/static/*.css"
+  "waternlights/webui/templastes/*.html",
+  "waternlights/webui/static/*.css"
 ]
 
 [tool.poetry.dependencies]

@@ -1,12 +1,12 @@
-# Gisela Ortt
-Projeto de um site para a venda de desenhos e publicações de um blog da Gisela Ortt   
+# WaternLights
+Projeto de um site pessoal de venda de ilustrações e publicações de um blog da ilustradora `Gisela Ortt`   
 <a href="https://www.instagram.com/waternlights/">
   <img alt="Instagram" src="https://img.shields.io/badge/Watern Lights-%23E4405F.svg?&logo=Instagram&logoColor=white"/>
-</a>   
+</a>
 
 <a href="https://drive.google.com/drive/u/0/folders/1D8wFGOGt5BMG6-57hG2jsTmZavpsbuxN">
   <img alt="GoogleDrive" src="https://img.shields.io/badge/-Portifólio-%2331A8FF.svg?&logo=GoogleDrive&logoColor=white"/>
-</a>     
+</a>
 <br>
 
 Índice
@@ -27,12 +27,12 @@ Para você rodar o projeto é necessário tem instalado em sua máquina o [`Pyth
 ## Como rodar esse projeto
 - ### Clone esse repositório.
 ```bash
-git clone https://github.com/igor-taconi/giselaortt.git <nome_da_pasta>
+git clone https://github.com/igor-taconi/waternlights.git <nome_da_pasta>
 ```
 - ### Virtualenv e dependências
   ### Venv
 
-  - ##### Crie um virtualenv com Python3 usando o venv.   
+  - ##### Crie um virtualenv com Python3 usando o venv.
 ```bash
 cd <nome_da_pasta>
 python -m venv .venv
@@ -55,7 +55,7 @@ pip install --require-hashes -r requirements_test.txt
 ```
 
   ### Poetry
-  - ##### Crie um virtualenv com Python 3.8 usando o poetry.   
+  - ##### Crie um virtualenv com Python 3.8 usando o poetry.
 ```bash
 cd <nome_da_pasta>
 poetry env use 3.8
@@ -77,7 +77,7 @@ flask run
 ```
 ou
 ```bash
-gunicorn giselaortt.wsgi:app --bind 0.0.0.0:5000 --timeout 1000 --worker-class gevent
+gunicorn waternlights.wsgi:app --bind 0.0.0.0:5000 --timeout 1000 --worker-class gevent
 ```
 ou
 ```bash

@@ -1,5 +1,5 @@
 import pytest
-from giselaortt.app import create_app, minimal_app
+from waternlights.app import create_app, minimal_app
 
 
 @pytest.fixture(scope='module')

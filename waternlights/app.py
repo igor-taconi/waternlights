@@ -1,6 +1,6 @@
 from flask import Flask
 
-from giselaortt.extensions import configuration
+from waternlights.extensions import configuration
 
 
 def minimal_app(**config):

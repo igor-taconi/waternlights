@@ -13,78 +13,35 @@ Projeto de um site pessoal de venda de ilustrações e publicações de um blog 
 =================
   * [Pré-requisitos](#pré-requisitos)
   * [Como rodar o projeto](#como-rodar-esse-projeto)
-    * [Virtualenv e dependências](#virtualenv-e-dependências)
-      * [venv](#venv)
-      * [poetry](#poetry)
-      * [Rodar o projeto](#rodar-o-projeto)
   * [Todo](#todo)
   * [Contribuindo](#contribuindo)
   * [Licença](#licença)
 
 ## Pré-requisitos
-Para você rodar o projeto é necessário tem instalado em sua máquina o [`Python3.6.+`](https://www.python.org/) e [`Poetry`](https://python-poetry.org/) se ele for a sua escolha para gerenciar as dependências, o módulo `venv` já vem instalado com o python. Em ambos os sites, do python e do poetry, há istruções para você instala-los em sua máquina.
+Para você rodar o projeto é necessário tem instalado em sua máquina o [`Python3.6.+`](https://www.python.org/)
 
 ## Como rodar esse projeto
-- ### Clone esse repositório.
-```bash
-git clone https://github.com/igor-taconi/waternlights.git <nome_da_pasta>
-```
-- ### Virtualenv e dependências
-  ### Venv
-
-  - ##### Crie um virtualenv com Python3 usando o venv.
-```bash
-cd <nome_da_pasta>
-python -m venv .venv
-```
-
-  - #### Ative o virtualenv.
+- #### Instale as dependências.
 ```sh
-# Para Macs ou Linux
-source .venv/bin/activate
-# For Windows
-.venv\Scripts\activate
-```
-
-  - #### Instale as dependências.
-```bash
 pip install -U pip
-pip install --require-hashes -r requirements.txt
-pip install --require-hashes -r requirements_dev.txt
-pip install --require-hashes -r requirements_test.txt
-```
-
-  ### Poetry
-  - ##### Crie um virtualenv com Python 3.8 usando o poetry.
-```bash
-cd <nome_da_pasta>
-poetry env use 3.8
-```
-
-  - #### Ative o virtualenv.
-```bash
-poetry shell
-```
-
-  - #### Instale as dependências.
-```bash
+pip install poetry
 poetry install
 ```
 
 - ### Rodar o projeto
-```bash
+```sh
 flask run
 ```
 ou
-```bash
+```sh
 gunicorn waternlights.wsgi:app --bind 0.0.0.0:5000 --timeout 1000 --worker-class gevent
 ```
 ou
-```bash
+```sh
 make run
 ```
 - Entre no seu navegador acessando a porta padrão
-```bash
+```sh
 http://127.0.0.1:5000/
 ```
 

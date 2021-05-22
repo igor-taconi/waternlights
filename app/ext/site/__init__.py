@@ -3,7 +3,7 @@ from typing import NoReturn
 from flask import Blueprint, Flask
 
 from app.config import static_folder, template_folder
-from app.ext.site.views import about, blog, index, login, store
+from app.ext.site.views import about, contact, index, publications
 
 bp = Blueprint(
     "ui",
@@ -13,10 +13,9 @@ bp = Blueprint(
 )
 
 bp.add_url_rule("/", view_func=index)
-bp.add_url_rule("/store", view_func=store)
-bp.add_url_rule("/login", view_func=login, endpoint="login")
-bp.add_url_rule("/blog", view_func=blog)
-bp.add_url_rule("/about", view_func=about)
+bp.add_url_rule("/contato", view_func=contact)
+bp.add_url_rule("/publicacoes", view_func=publications)
+bp.add_url_rule("/sobre", view_func=about)
 
 
 def init_app(app: Flask) -> NoReturn:

@@ -1,6 +1,6 @@
 ISORT_ARGS := --combine-star --combine-as --order-by-type --thirdparty scrapy --multi-line 3 --trailing-comma --force-grid-wrap 0 --use-parentheses --line-width 79
 
-SRC_DIRS := ./packages/app
+SRC_DIRS := ./app
 
 check:
 	python -m isort --check --diff $(ISORT_ARGS) $(SRC_DIRS)

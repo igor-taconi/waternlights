@@ -16,10 +16,10 @@ admin = Admin()
 
 
 def init_app(app: Flask) -> NoReturn:
+    SimpleLogin(app, login_checker=verify_login)
     admin.name = app.config.FLASK_ADMIN_TITLE
     admin.template_mode = app.config.FLASK_ADMIN_TEMPLATE_MODE
     admin.init_app(app)
     admin.add_view(UserAdmin(User))
     admin.add_view(PostAdmin(Post))
     admin.add_view(ModelView(PostCategory))
-    SimpleLogin(app, login_checker=verify_login)

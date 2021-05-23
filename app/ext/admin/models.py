@@ -22,6 +22,7 @@ class PostAdmin(ModelView):
         update_at='Data de Atualização',
         category='Categoria',
         user='Usuário',
+        slug='URL'
     )
 
     column_formatters = dict(
@@ -31,14 +32,12 @@ class PostAdmin(ModelView):
 
     column_type_formatters = date_formatters
 
-    column_default_sort = ('create_at', True)
+    column_default_sort = ('update_at', True)
 
-    column_sortable_list = ("title", "title", "update_at")
+    column_searchable_list = ('title', User.username, PostCategory.category)
 
-    column_searchable_list = ("title", User.username, PostCategory.category)
-
-    column_filters = ("title", "create_at", User.username)
+    column_filters = ('title', 'create_at', User.username)
 
     form_columns = ('title', 'text', 'category', 'user')
 
-    form_ajax_refs = {"user": {"fields": (User.username, "email")}}
+    form_ajax_refs = {'user': {'fields': (User.username, 'email')}}

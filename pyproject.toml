@@ -38,6 +38,7 @@ peewee = "^3.14.4"
 flask_simplelogin = "^0.0.7"
 wtf-peewee = "^3.0.2"
 Flask-Admin = "^1.5.8"
+python-slugify = "^5.0.2"
 
 [tool.poetry.dev-dependencies]
 ipdb = "^0.13.6"

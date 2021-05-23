@@ -1,6 +1,7 @@
 from datetime import datetime
 
 import peewee as pw
+from slugify import slugify
 
 from app.config import settings
 
@@ -27,16 +28,22 @@ class User(BaseModel):
 
 
 class PostCategory(BaseModel):
-    category = pw.CharField(max_length=30)
+    category = pw.CharField(max_length=120)
 
 
 class Post(BaseModel):
     title = pw.CharField(max_length=120)
     text = pw.TextField()
     create_at = pw.DateTimeField(default=datetime.now)
-    update_at = pw.DateTimeField(null=True, default=create_at)
+    update_at = pw.DateTimeField(default=datetime.now)
+    slug = pw.CharField(max_length=120)
     user = pw.ForeignKeyField(User, backref="post", null=True)
     category = pw.ForeignKeyField(PostCategory, backref="post", null=True)
 
     class Meta:
         order_by = ("-update_at",)
+
+    def __init__(self, *args, **kwargs):
+        kwargs['slug'] = slugify(kwargs.get('title', ''))
+        kwargs['update_at'] = datetime.now()
+        super().__init__(*args, **kwargs)

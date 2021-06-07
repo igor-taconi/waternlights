@@ -21,14 +21,18 @@ class BaseModel(pw.Model):
         database = db
 
 
+class BaseCategory(BaseModel):
+    category = pw.CharField()
+
+
 class User(BaseModel):
     username = pw.CharField(max_length=80)
     email = pw.CharField(max_length=120)
     password = pw.TextField()
 
 
-class PostCategory(BaseModel):
-    category = pw.CharField(max_length=120)
+class PostCategory(BaseCategory):
+    ...
 
 
 class Post(BaseModel):
@@ -45,5 +49,25 @@ class Post(BaseModel):
 
     def __init__(self, *args, **kwargs):
         kwargs['slug'] = slugify(kwargs.get('title', ''))
-        kwargs['update_at'] = datetime.now()
+        # kwargs['update_at'] = datetime.now()
+        super().__init__(*args, **kwargs)
+
+
+class IlustrationCategory(BaseCategory):
+    ...
+
+
+class Ilustration(BaseModel):
+    title = pw.CharField()
+    image = pw.TextField()
+    creation_date = pw.DateTimeField(null=True, default=datetime.now)
+    inserted_at = pw.DateTimeField(default=datetime.now)
+    decription = pw.TextField(null=True)
+    slug = pw.CharField()
+    category = pw.ForeignKeyField(
+        IlustrationCategory, backref='ilustration', null=True
+    )
+
+    def __init__(self, *args, **kwargs):
+        kwargs['slug'] = slugify(kwargs.get('title', ''))
         super().__init__(*args, **kwargs)

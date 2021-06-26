@@ -6,9 +6,9 @@ from flask_admin.base import AdminIndexView
 from flask_admin.contrib.peewee import ModelView
 from flask_simplelogin import login_required, SimpleLogin
 
-from app.controllers import verify_login
+from app.database.models import Post, PostCategory, User
+from .auth import verify_login
 from .models import PostAdmin, UserAdmin
-from app.models import Post, PostCategory, User
 
 AdminIndexView._handle_view = login_required(AdminIndexView._handle_view)
 ModelView._handle_view = login_required(ModelView._handle_view)

@@ -1,8 +1,8 @@
 from flask_admin.contrib.peewee import ModelView
 from werkzeug.security import generate_password_hash
 
-from app.controllers import date_formatters
-from app.models import PostCategory, User
+from .utils import date_formatters
+from app.database.models import PostCategory, User
 
 
 class UserAdmin(ModelView):

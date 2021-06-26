@@ -46,22 +46,16 @@ http://127.0.0.1:5000/
 ```
 
 ## Todo
-:white_check_mark: Pronto
-:soon: Em progresso
-
-| Status | Tarefa |
-|--------|--------|
-|:soon:| Testes de unidade |
-| | Criar admim |
-| | Banco de dados para os usuários |
-| | Banco de dados para os post's |
-| | Banco de dados para os produtos |
-| | Testes funcionais |
-| | Interface do usuário (UI) |
-| | Calcular frete |
-| | Validar dados de pagamento |
-| | Experiência do usuário (UX) |
-| | Adicionar guias para outros gerenciadores de dependências |
+- [ ] Criar admim  
+- [ ] Banco de dados para os usuários  
+- [ ] Banco de dados para os post's  
+- [ ] Banco de dados para os produtos  
+- [ ] Testes funcionais  
+- [ ] Interface do usuário (UI)  
+- [ ] Calcular frete  
+- [ ] Validar dados de pagamento  
+- [ ] Experiência do usuário (UX)  
+- [ ] Adicionar guias para outros gerenciadores de dependências  
 
 ## Contribuindo
 Sinta-se à vontade para enviar pull request ou criar uma issue para sujestões ou discuções sobre escolhas no projeto, estrutura ou feramentas.

@@ -4,18 +4,18 @@ FLASK_ADMIN_NAME = "Gisela Admin"
 FLASK_ADMIN_TEMPLATE_MODE = "bootstrap3"
 FLASK_ADMIN_SWATCH = 'cerulean'
 FLASK_ADMIN_TITLE = "Gisela Ortt"
-SECRET_KEY = "jadkfbsdkjbfbh"
-PASSWORD_SCHEMES = ['pbkdf2_sha512', 'md5_crypt']
 EXTENSIONS = [
-    "app.ext.site:init_app",
-    "app.ext.hooks:init_app",
-    "app.ext.admin:init_app",
+    "app.site.pages:init_app",
+    "app.site.ilustrations:init_app",
+    "app.site.publications:init_app",
+    "app.hooks:init_app",
+    "app.admin:init_app",
 ]
 
 [development]
 EXTENSIONS = [
     "flask_debugtoolbar:DebugToolbarExtension",
-    "dynaconf_merge_unique"  # to reuse extensions list from [default]
+    "dynaconf_merge_unique"
 ]
 TEMPLATES_AUTO_RELOAD = true
 DEBUG = true
@@ -25,7 +25,6 @@ DEBUG_TB_PROFILER_ENABLED = true
 DEBUG_TB_TEMPLATE_EDITOR_ENABLED = true
 DEBUG_TB_PANELS = [
     "flask_debugtoolbar.panels.versions.VersionDebugPanel",
-    "flask_debugtoolbar.panels.sqlalchemy.SQLAlchemyDebugPanel",
     "flask_debugtoolbar.panels.timer.TimerDebugPanel",
     "flask_debugtoolbar.panels.headers.HeaderDebugPanel",
     "flask_debugtoolbar.panels.request_vars.RequestVarsDebugPanel",

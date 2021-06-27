@@ -3,14 +3,20 @@ from typing import NoReturn
 from flask import Flask
 
 from app.database import db
-from app.database.models import Post, PostCategory, User
+from app.database.models import (
+    Ilustration,
+    IlustrationCategory,
+    Post,
+    PostCategory,
+    User,
+)
 
 
 def init_app(app: Flask) -> NoReturn:
     @app.before_first_request
     def _create_tables():
         '''Cria as tabelas do banco antes do primeiro request.'''
-        MODELS = [Post, PostCategory, User]
+        MODELS = [Ilustration, IlustrationCategory, Post, PostCategory, User]
         db.create_tables(MODELS)
 
     @app.teardown_request

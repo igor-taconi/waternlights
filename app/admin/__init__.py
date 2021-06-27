@@ -6,7 +6,13 @@ from flask_admin.base import AdminIndexView
 from flask_admin.contrib.peewee import ModelView
 from flask_simplelogin import login_required, SimpleLogin
 
-from app.database.models import Post, PostCategory, User
+from app.database.models import (
+    Ilustration,
+    IlustrationCategory,
+    Post,
+    PostCategory,
+    User,
+)
 from .auth import verify_login
 from .models import PostAdmin, UserAdmin
 
@@ -23,3 +29,5 @@ def init_app(app: Flask) -> NoReturn:
     admin.add_view(UserAdmin(User))
     admin.add_view(PostAdmin(Post))
     admin.add_view(ModelView(PostCategory))
+    admin.add_view(ModelView(Ilustration))
+    admin.add_view(ModelView(IlustrationCategory))
